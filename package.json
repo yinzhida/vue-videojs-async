@@ -51,5 +51,8 @@
   "bugs": {
     "url": "https://github.com/yinzhida/vue-videojs/issues"
   },
-  "homepage": "https://github.com/yinzhida/vue-videojs#readme"
+  "homepage": "https://github.com/yinzhida/vue-videojs#readme",
+  "dependencies": {
+    "loadjs": "^3.5.5"
+  }
 }

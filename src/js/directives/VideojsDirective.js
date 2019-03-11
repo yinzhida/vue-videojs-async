@@ -2,7 +2,7 @@
  * Created Date: 2018-08-21 10:09:55
  * Author: yinzhida Email: zhaoxinxin@qiyi.com
  * -----
- * Last Modified: 2019-03-11 15:01:03
+ * Last Modified: 2019-03-11 15:39:49
  * Modified By: yinzhida yinzhida@qiyi.com
  * -----
  * Copyright (c) 2018 IQIYI
@@ -29,43 +29,27 @@ let videojsDirective = {
     }, v.options)
 
     let videoTag = document.createElement('video')
-    videoTag.setAttribute('class', 'video-js vjs-default-skin vjs-big-play-centered')
+    videoTag.setAttribute('class', 'video-js')
 
-    // 用以检查videojs的版本， 旧版本采用videojs函数直接初始化
-    if (!videojs.playerRun) {
-      let sourceTag = document.createElement('source')
-      sourceTag.setAttribute('src', v.m3u8)
-      sourceTag.setAttribute('type', 'application/x-mpegURL')
-      sourceTag.setAttribute('videotype', v.videoType)
-      sourceTag.setAttribute('f4vurl', v.f4vUrl)
-      videoTag.appendChild(sourceTag)
-      el.appendChild(videoTag)
-      window.vueVideojsVideo[v.id] = videojs(videoTag, options)
-    } else {
-      // videojs 新版本，通过playerRun初始化
-      el.appendChild(videoTag)
-      window.vueVideojsVideo[v.id] = videojs.playerRun(Object.assign(options, {
-        videoId: videoTag,
-        m3u8Url: v.m3u8,
-        f4vUrl: v.f4vUrl,
-        videoType: v.videoType,
-        type: v.type
-      }))
-    }
+    let sourceTag = document.createElement('source')
+    sourceTag.setAttribute('src', v.src)
+    sourceTag.setAttribute('type', v.type || 'video/mp4')
+    videoTag.appendChild(sourceTag)
+    el.appendChild(videoTag)
+    window.vueVideojsVideo[v.id] = videojs(videoTag, options)
   },
 
   // 切换src，其他属性变化暂时不予响应
   update: function (el, binding) {
     let v = binding.value
     let oldv = binding.oldValue
-    if (oldv.m3u8 === v.m3u8 && oldv.f4vUrl === v.f4vUrl) {
+    if (oldv.src === v.src) {
       return
     }
     let video = window.vueVideojsVideo[v.id]
     if (!video) {
       return
     }
-    video.tech_.hls_.config.f4vUrl = v.f4vUrl
     video.src({
       'src': v.m3u8
     })
