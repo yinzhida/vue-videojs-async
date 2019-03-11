@@ -6,7 +6,7 @@ use videojs through vue async component, so you can load video.js and video.css 
 https://github.com/yinzhida/vue-videojs-async for more details
 
 # install
-npm install vue-videojs-async
+npm install --save vue-videojs-async
 
 # use
 ```js
@@ -35,6 +35,7 @@ the default path of videojs source file is '//vjs.zencdn.net/7.3.0/video.min.js'
 you can change the path(url) of videojs source file like this: 
 ```js
 import { Videojs, asyncVideojsCompFactory } from 'vue-videojs-async'
+// ...
 asyncVideojsCompFactory(Videojs, videojsPath, videojsCssPath, compName)
 ```
 
