@@ -1,0 +1,55 @@
+{
+  "name": "vue-videojs-async",
+  "version": "0.0.1",
+  "description": "async component for videojs",
+  "main": "dist/vue-videojs-async",
+  "scripts": {
+    "build": "node build/build.js",
+    "pb": "node build/build.js && npm publish",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "chalk": "^2.4.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "ora": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "url-loader": "^0.6.2",
+    "vue": "^2.5.16",
+    "vue-eslint-parser": "^4.0.3",
+    "vue-loader": "^13.6.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinzhida/vue-videojs.git"
+  },
+  "keywords": [
+    "videojs",
+    "vue"
+  ],
+  "author": "yinzhida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yinzhida/vue-videojs/issues"
+  },
+  "homepage": "https://github.com/yinzhida/vue-videojs#readme"
+}
