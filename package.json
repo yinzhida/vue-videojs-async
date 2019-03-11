@@ -1,6 +1,6 @@
 {
   "name": "vue-videojs-async",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "async component for videojs",
   "main": "dist/vue-videojs-async.js",
   "scripts": {
