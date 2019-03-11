@@ -1,6 +1,9 @@
 # vue-videojs-async
 
-use videojs async throw vue async component
+use videojs through vue async component, so you can load video.js and video.css when you really need it.
+
+# github
+https://github.com/yinzhida/vue-videojs-async
 
 # install
 npm install vue-videojs-async
