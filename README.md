@@ -9,7 +9,7 @@ npm install vue-videojs-async
 ```js
 // main.js
 import { VueVideojs } from 'vue-videojs-async'
-import 'vue-videojs-async.css'
+import 'vue-videojs-async/dist/vue-videojs-async.css'
 
 Vue.use(VueVideojs)
 ```
