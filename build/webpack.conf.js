@@ -48,7 +48,7 @@ var webpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('node_modules/qui-utils/src')]
+        include: [resolve('src')]
       },
       {
         test: /\.scss$/,

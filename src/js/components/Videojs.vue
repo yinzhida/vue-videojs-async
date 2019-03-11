@@ -2,14 +2,14 @@
  * Created Date: 2019-03-11 14:51:47
  * Author: yinzhida Email: yinzhida@qiyi.com
  * -----
- * Last Modified: 2019-03-11 15:40:46
+ * Last Modified: 2019-03-11 19:11:01
  * Modified By: yinzhida yinzhida@qiyi.com
  * -----
  * Copyright (c) 2019 IQIYI
  */
 
 <template>
-  <div v-videojs="{m3u8: m3u8, type: type, id: playerId, options: options}" class="videojs-vue" :style="innerDimension"></div>
+  <div v-videojs="{src: src, type: type, id: playerId, options: options}" class="videojs-vue" :style="innerDimension"></div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
   name: 'Videojs',
 
   props: {
-    m3u8: String,
+    src: String,
     playerId: {
       type: String,
       default: '1'
@@ -40,7 +40,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'application/m3u8'
+      default: 'video/mp4'
     },
   },
 

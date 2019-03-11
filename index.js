@@ -2,7 +2,7 @@
  * Created Date: 2018-10-17 4:38:41
  * Author: yinzhida Email: yinzhida@qiyi.com
  * -----
- * Last Modified: 2019-03-11 16:11:40
+ * Last Modified: 2019-03-11 17:24:05
  * Modified By: yinzhida yinzhida@qiyi.com
  * -----
  * Copyright (c) 2018 IQIYI
@@ -29,7 +29,7 @@ function asyncLoaderFactory (comp, videojsPath, videojsCssPath) {
   }
 }
 
-function asyncVideojsCompFactory (compName = 'vue-custom-videojs', comp, videojsPath, videojsCssPath) {
+function asyncVideojsCompFactory (comp, videojsPath, videojsCssPath, compName = 'vue-custom-videojs') {
   return {
     install (Vue) {
       Vue.component(compName, asyncLoaderFactory(comp, videojsPath, videojsCssPath))
@@ -39,7 +39,7 @@ function asyncVideojsCompFactory (compName = 'vue-custom-videojs', comp, videojs
 
 const VueVideojs = {
   install (Vue) {
-    Vue.component('vue-videojs', asyncLoaderFactory(Videojs))
+    Vue.component('vue-videojs-async', asyncLoaderFactory(Videojs))
   }
 }
 

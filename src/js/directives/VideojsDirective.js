@@ -2,7 +2,7 @@
  * Created Date: 2018-08-21 10:09:55
  * Author: yinzhida Email: zhaoxinxin@qiyi.com
  * -----
- * Last Modified: 2019-03-11 15:39:49
+ * Last Modified: 2019-03-11 19:16:28
  * Modified By: yinzhida yinzhida@qiyi.com
  * -----
  * Copyright (c) 2018 IQIYI
@@ -51,7 +51,7 @@ let videojsDirective = {
       return
     }
     video.src({
-      'src': v.m3u8
+      'src': v.src
     })
   },
 
