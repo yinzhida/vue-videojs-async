@@ -1,6 +1,9 @@
 # vue-videojs-async
 
-use videojs through vue async component, so you can load video.js and video.css when you really need it.
+use videojs through vue async component, so you can load video.js and video.css when you really need it. you can change the video src only by change the component props.
+
+# preview
+![preview](previewImage/video.png)
 
 # github
 https://github.com/yinzhida/vue-videojs-async for more details

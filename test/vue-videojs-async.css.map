@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/css/components/videojs.css"],"names":[],"mappings":"AAAA;EACE,uBAAuB;EACvB,wBAAwB","file":"vue-videojs-async.css","sourcesContent":[".videojs-vue .video-js {\n  width: 100% !important;\n  height: 100% !important;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/css/components/videojs.css"],"sourceRoot":""}
